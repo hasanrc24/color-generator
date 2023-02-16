@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+.body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+#output{
+    padding: 6px;
+    margin: 10px;
+    margin-right: 0;
+}
+#copy-btn, #generate-btn{
+    padding: 7px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#copy-btn:disabled{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.toast{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 9;
+    border: 1px solid purple;
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toast-in{
+    animation: msg-slide-in ease-in-out 0.5s;
+}
+.toast-out{
+    animation: msg-slide-out ease-in-out 0.5s;
+}
+
+@keyframes msg-slide-in{
+    from{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes msg-slide-out{
+    from{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
